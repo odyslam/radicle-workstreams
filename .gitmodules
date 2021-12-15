@@ -8,3 +8,6 @@
 [submodule "lib/solmate"]
 	path = lib/solmate
 	url = https://github.com/Rari-Capital/solmate
+[submodule "lib/radicle-drips-hub"]
+	path = lib/radicle-drips-hub
+	url = https://github.com/radicle-dev/radicle-drips-hub
