@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-15T11:05:32.782Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="RDT0pQEF7U1W_REtsawy" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-15T13:20:38.893Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="r7seHBZTuiA_ufEkjjbh" version="15.9.6" type="github">
   <diagram id="aFoFvylehnQIZ880cugu" name="Page-1">
     <mxGraphModel dx="3543" dy="2469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -441,7 +441,7 @@
         <mxCell id="Ib6DeROVkXsYVczCvPkx-56" value="&lt;h1 style=&quot;font-size: 24px&quot;&gt;Proposal&lt;/h1&gt;&lt;div&gt;&lt;ul style=&quot;font-weight: 700 ; font-size: 18px&quot;&gt;&lt;li&gt;&lt;font&gt;bytes32[] proposalRemoteId&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;bytes32[] proposalCommit&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint amount&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint period&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint minimumRunway&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;address[] team&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=19;comic=1;" vertex="1" parent="1">
           <mxGeometry x="-1340" y="1920" width="330" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="Ib6DeROVkXsYVczCvPkx-59" value="&lt;h1 style=&quot;font-size: 24px&quot;&gt;DripsHub&lt;/h1&gt;&lt;div&gt;&lt;ul style=&quot;font-weight: 700 ; font-size: 18px&quot;&gt;&lt;li&gt;&lt;font&gt;bytes32 proposalRemoteId&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;bytes32 proposalCommit&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint amount&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint period&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;uint minimumRunway&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font&gt;address[] team&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=19;comic=1;" vertex="1" parent="1">
+        <mxCell id="Ib6DeROVkXsYVczCvPkx-59" value="&lt;h1 style=&quot;font-size: 24px&quot;&gt;DripsHub&lt;/h1&gt;&lt;div&gt;&lt;ul style=&quot;font-weight: 700 ; font-size: 18px&quot;&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=19;comic=1;" vertex="1" parent="1">
           <mxGeometry x="-957" y="1930" width="330" height="310" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;comic=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=19;" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-64">
@@ -455,6 +455,9 @@
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-64" value="Orgv1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=19;" vertex="1" parent="1">
           <mxGeometry x="-813" y="1225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ib6DeROVkXsYVczCvPkx-65" value="&lt;ul&gt;&lt;li&gt;It drips to the team&lt;/li&gt;&lt;li&gt;The team splits to the team-members&lt;/li&gt;&lt;li&gt;Any team-member can collect() at any point of time&lt;/li&gt;&lt;/ul&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;rounded=1;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontStyle=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-613" y="1490" width="250" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
