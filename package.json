@@ -1,9 +1,9 @@
 {
-  "name": "dapptools-template",
-  "author": "Georgios Konstantopoulos",
-  "license": "Unlicense",
+  "name": "radicle-work-streams",
+  "author": "Odysseas Lamtzidis",
+  "license": "MIT",
   "version": "1.0.0",
-  "description": "A template for building dapptools projects",
+  "description": "Radicle work streams enable projects and open-source projects to compensate their contributors.",
   "files": [
     "*.sol"
   ],
