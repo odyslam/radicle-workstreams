@@ -5,5 +5,3 @@ import {Hevm} from "./Hevm.sol";
 import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
 
 contract WorkStreamTest is DSTestPlus {}
-
-
