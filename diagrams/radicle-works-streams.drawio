@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-17T11:00:05.359Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="67FJCUqBVCyb7JOb3ECt" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-17T11:07:25.065Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="JMG0DCQX_WCAPGBMKqW3" version="15.9.6" type="github">
   <diagram id="aFoFvylehnQIZ880cugu" name="Page-1">
-    <mxGraphModel dx="5054" dy="3509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5904" dy="4094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,19 +8,19 @@
           <mxGeometry x="97" y="1340" width="150" height="940" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-43" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fillColor=#e1d5e7;opacity=30;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="657" y="1340" width="150" height="940" as="geometry" />
+          <mxGeometry x="998" y="1340" width="150" height="940" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-37" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
           <mxGeometry x="260" y="1340" width="150" height="940" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-42" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
-          <mxGeometry x="820" y="1340" width="150" height="940" as="geometry" />
+          <mxGeometry x="1161" y="1340" width="150" height="940" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-46" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="2145" width="970" height="110" as="geometry" />
+          <mxGeometry x="1371" y="2145" width="970" height="110" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-47" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fillColor=#e1d5e7;opacity=30;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="2040" width="970" height="98" as="geometry" />
+          <mxGeometry x="1371" y="2040" width="970" height="98" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-145" value="&lt;span&gt;&lt;font style=&quot;font-size: 22px&quot;&gt;Work Stream&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontSize=18;strokeWidth=1;fillColor=none;verticalAlign=top;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-563" y="315" width="660" height="510" as="geometry" />
@@ -202,51 +202,51 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-78" value="Fork project" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="1350" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="1350" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-166" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;sketch=1;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;fontFamily=Inter;fontSize=19;fontColor=#000000;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;fontStyle=1" parent="1" source="pgXHUsl6ziU6hxeNJN-O-79" target="pgXHUsl6ziU6hxeNJN-O-81" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-79" value="Create proposal doc" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="1450" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="1450" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-95" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;sketch=1;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;shadow=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;fontStyle=1" parent="1" source="pgXHUsl6ziU6hxeNJN-O-81" target="pgXHUsl6ziU6hxeNJN-O-93" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-81" value="Push changes to fork" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="1550" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="1550" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-84" value="Org merges fork + anchor commit" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="1770" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="1770" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-90" value="Proposed" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;fontStyle=1;fontSize=13;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;" parent="1" vertex="1">
-          <mxGeometry x="1010" y="1550" width="120" height="60" as="geometry" />
+          <mxGeometry x="1351" y="1550" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-91" value="Active" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;fontStyle=1;fontSize=13;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;" parent="1" vertex="1">
-          <mxGeometry x="1010" y="1890" width="120" height="60" as="geometry" />
+          <mxGeometry x="1351" y="1890" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-94" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;sketch=1;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;fontStyle=1" parent="1" source="pgXHUsl6ziU6hxeNJN-O-93" target="pgXHUsl6ziU6hxeNJN-O-84" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-93" value="Apply changes to fork after feedback" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="1660" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="1660" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-146" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;sketch=1;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;fontFamily=Inter;fontSize=22;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1" parent="1" source="pgXHUsl6ziU6hxeNJN-O-84" target="pgXHUsl6ziU6hxeNJN-O-99" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="890" y="1949.9999999999995" as="sourcePoint" />
+            <mxPoint x="1231" y="1949.9999999999995" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="pgXHUsl6ziU6hxeNJN-O-99" target="eBi0msgRa54en9dExMAm-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-99" value="Work on project" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="830" y="2000" width="120" height="60" as="geometry" />
+          <mxGeometry x="1171" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-110" value="Proposal State&lt;br style=&quot;font-size: 13px;&quot;&gt;Machine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;fontStyle=1;strokeWidth=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;" parent="1" vertex="1">
-          <mxGeometry x="984" y="1260" width="180" height="60" as="geometry" />
+          <mxGeometry x="1325" y="1260" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-111" value="Apply for work-stream&amp;nbsp; flow chart" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;fontStyle=1;strokeWidth=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;" parent="1" vertex="1">
-          <mxGeometry x="790" y="1260" width="180" height="60" as="geometry" />
+          <mxGeometry x="1131" y="1260" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pgXHUsl6ziU6hxeNJN-O-112" value="&amp;lt;RFP_name&amp;gt; (directory)" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;strokeWidth=1;align=left;verticalAlign=top;fontStyle=1;comic=1;" parent="1" vertex="1">
           <mxGeometry x="1131.25" y="365" width="232.5" height="200" as="geometry" />
@@ -388,7 +388,7 @@
           <mxGeometry x="120" y="1500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-15" value="Open" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="440" y="1500" width="120" height="60" as="geometry" />
+          <mxGeometry x="781" y="1500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;fontStyle=1" parent="1" source="Ib6DeROVkXsYVczCvPkx-16" target="Ib6DeROVkXsYVczCvPkx-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -396,20 +396,17 @@
         <mxCell id="Ib6DeROVkXsYVczCvPkx-16" value="Wait on Proposals" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="270" y="1640" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-18" target="eBi0msgRa54en9dExMAm-25">
+        <mxCell id="eBi0msgRa54en9dExMAm-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=137.5;entryDy=60;entryPerimeter=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fontColor=#000000;" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-18" target="eBi0msgRa54en9dExMAm-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=137.5;entryDy=60;entryPerimeter=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fontColor=#000000;" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-18" target="eBi0msgRa54en9dExMAm-32">
+        <mxCell id="eBi0msgRa54en9dExMAm-60" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-18" target="eBi0msgRa54en9dExMAm-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-18" value="Choose Accepted Proposal" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="270" y="1780" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-20" value="Close" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="440" y="1780" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.008;entryY=0.385;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fontColor=#000000;" edge="1" parent="1" source="Ib6DeROVkXsYVczCvPkx-21" target="eBi0msgRa54en9dExMAm-34">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry x="780" y="1970" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-21" value="Fund project" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="270" y="2170" width="120" height="60" as="geometry" />
@@ -418,7 +415,7 @@
           <mxGeometry x="120" y="1785" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-24" value="RFP state machine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;fontStyle=1;strokeWidth=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;" parent="1" vertex="1">
-          <mxGeometry x="409" y="1250" width="180" height="60" as="geometry" />
+          <mxGeometry x="750" y="1250" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-25" value="Create Work Stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;fontStyle=1;strokeWidth=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;comic=1;" parent="1" vertex="1">
           <mxGeometry x="239" y="1250" width="180" height="60" as="geometry" />
@@ -445,7 +442,7 @@
           <mxGeometry x="150" y="950" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-36" value="on-chain tx" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="680" y="1770" width="120" height="60" as="geometry" />
+          <mxGeometry x="1021" y="1770" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ib6DeROVkXsYVczCvPkx-49" value="cred module" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="290" y="920" width="120" height="60" as="geometry" />
@@ -480,7 +477,7 @@
           <mxGeometry x="-613" y="1490" width="250" height="190" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-1" value="Contributoooooor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1260" width="30" height="60" as="geometry" />
+          <mxGeometry x="1061" y="1260" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-2" value="Work Stream Creatooooor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;" vertex="1" parent="1">
           <mxGeometry x="165" y="1250" width="30" height="60" as="geometry" />
@@ -490,7 +487,7 @@
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-4">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1050" y="2177.5" as="targetPoint" />
+            <mxPoint x="1391" y="2177.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-8" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" connectable="0" parent="eBi0msgRa54en9dExMAm-6">
@@ -499,43 +496,43 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-4" value="Project-based?" style="rhombus;whiteSpace=wrap;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="820" y="2115" width="140" height="125" as="geometry" />
+          <mxGeometry x="1161" y="2115" width="140" height="125" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-7" target="eBi0msgRa54en9dExMAm-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-7" value="Finish work" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1060" y="2147.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="1401" y="2147.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-9" target="eBi0msgRa54en9dExMAm-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-9" value="Submit patch to project repo" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1260" y="2147.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="1601" y="2147.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-11" target="eBi0msgRa54en9dExMAm-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-11" value="Submit commits to signal project completion" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1460" y="2147.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="1801" y="2147.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-13" value="on-chain tx" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1460" y="2070" width="120" height="60" as="geometry" />
+          <mxGeometry x="1801" y="2070" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-14" target="eBi0msgRa54en9dExMAm-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-14" value="Org accepts patch and publishes anchor" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1660" y="2147.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="2001" y="2147.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-16" value="END" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1845" y="2138" width="80" height="80" as="geometry" />
+          <mxGeometry x="2186" y="2138" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;dashed=1;fillColor=none;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="730" y="1980" width="330" height="310" as="geometry" />
+          <mxGeometry x="1071" y="1980" width="330" height="310" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-18" value="on-chain tx" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1660" y="2070" width="120" height="60" as="geometry" />
+          <mxGeometry x="2001" y="2070" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-23" value="&lt;ul&gt;&lt;li&gt;Every creator is the owner of the project, as the project can be a fork of a project&lt;/li&gt;&lt;li&gt;For every user, there will be a special project called &quot;rfps&quot; where all the rfps will be put&lt;/li&gt;&lt;/ul&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;rounded=1;shadow=0;glass=0;dashed=1;sketch=1;fontFamily=Inter;fontStyle=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-190" y="1435" width="250" height="190" as="geometry" />
@@ -553,10 +550,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-25" value="Merge Proposal fork&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="270" y="1920" width="120" height="60" as="geometry" />
+          <mxGeometry x="270" y="1970" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-27" target="Ib6DeROVkXsYVczCvPkx-21">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-56" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="2090" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-27" value="Anchor new commit" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="270" y="2060" width="120" height="60" as="geometry" />
@@ -565,16 +567,10 @@
           <mxGeometry x="126.5" y="2060" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-31" value="This anchored commit is the on-chain &quot;contract&quot;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="440" y="2040" width="137.5" height="100" as="geometry" />
+          <mxGeometry x="-190" y="2035" width="137.5" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=15;fontColor=#000000;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-32" target="eBi0msgRa54en9dExMAm-34">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-32" value="Proposed compensation by creatooooor" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="eBi0msgRa54en9dExMAm-32" value="Proposed compensation by contributooor" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-190" y="1750" width="137.5" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="eBi0msgRa54en9dExMAm-34" value="Compensation can be amended based on merged proposal" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-190" y="2160" width="137.5" height="100" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-39" value="blockchain settlement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;opacity=30;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="135" y="2290" width="65" height="30" as="geometry" />
@@ -583,13 +579,45 @@
           <mxGeometry x="260" y="2290" width="131" height="30" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-44" value="blockchain settlement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;opacity=30;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="695" y="2290" width="65" height="30" as="geometry" />
+          <mxGeometry x="1036" y="2290" width="65" height="30" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-45" value="social layer settlement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;opacity=30;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="820" y="2290" width="131" height="30" as="geometry" />
+          <mxGeometry x="1161" y="2290" width="131" height="30" as="geometry" />
         </mxCell>
         <mxCell id="eBi0msgRa54en9dExMAm-51" value="project" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;fixDash=0;curveFitting=1;strokeOpacity=100;fontStyle=1;fontSize=13;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;comic=1;" vertex="1" parent="1">
           <mxGeometry x="-1170" y="395" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-55" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-53" target="eBi0msgRa54en9dExMAm-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-64" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-53" target="eBi0msgRa54en9dExMAm-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-53" value="Request changes to Proposal" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=13;strokeWidth=1;comic=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="269" y="1900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-54" value="Final compensation agreed by all parties" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;dashed=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-190" y="1870" width="137.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-61" value="Yes" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-57" target="eBi0msgRa54en9dExMAm-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-62" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;fontColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="eBi0msgRa54en9dExMAm-57" target="eBi0msgRa54en9dExMAm-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="1890" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1850" />
+              <mxPoint x="329" y="1850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-63" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;fontFamily=Inter;fontColor=#000000;" vertex="1" connectable="0" parent="eBi0msgRa54en9dExMAm-62">
+          <mxGeometry x="-0.4256" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eBi0msgRa54en9dExMAm-57" value="Alignement?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DInter;fontSize=18;strokeWidth=2;shadow=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1754" width="130" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
