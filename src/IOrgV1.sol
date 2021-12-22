@@ -10,10 +10,8 @@ interface IOrgV1 {
 
     struct Anchor
     {
-    // A tag that can be used to discriminate between anchor types.
-    uint32 tag;
-    // The hash being anchored in multihash format.
-    bytes multihash;
+        uint32 tag;
+        bytes multihash;
     }
 
 }
