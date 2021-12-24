@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.10;
 
-interface IDAIDripsHub{
-
+interface IDripsHub {
     struct PermitArgs {
         uint256 nonce;
         uint256 expiry;
