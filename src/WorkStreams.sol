@@ -27,7 +27,11 @@ contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                               EVENTS
     //////////////////////////////////////////////////////////////*/
-    event WorkstreamCreated(address indexed org, address workStreamId);
+
+    /// @notice Emitted when a new workstream is created.
+    /// @param org The org address that created the event.
+    /// @param workstreamId The Id of the workstream.
+    event WorkstreamCreated(address indexed org, address workstreamId);
 
     uint256 public constant BASE_UNIT = 10e18;
 
