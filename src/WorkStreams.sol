@@ -5,7 +5,7 @@ import {RolesAuthority} from "solmate/auth/authorities/RolesAuthority.sol";
 import {SSTORE2} from "solmate/utils/SSTORE2.sol";
 import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
 import {SafeCastLib} from "solmate/utils/SafeCastLib.sol";
-import {IDripsHub} from "./IDAIDripsHub.sol";
+import {IDripsHub} from "./IDripsHub.sol";
 
 /*///////////////////////////////////////////////////////////////
                                ERRORS
@@ -37,15 +37,14 @@ contract Workstreams {
 
     mapping(address => address) public workstreamIdToOrgAddress;
 
-    uint256 internal accountCounter;
     IDripsHub internal daiDripsHub;
 
     /*///////////////////////////////////////////////////////////////
                             CONSTRUCTOR
     //////////////////////////////////////////////////////////////*/
 
-    constructor(address dripsHubAddress) {
-        daiDripsHub = IDripsHub(dripsHubAddress);
+    constructor(IDripsHub dripsHub) {
+        daiDripsHub = dripsHub;
     }
 
     /// @notice Create a new workstream with a DAI drip.
@@ -66,8 +65,10 @@ contract Workstreams {
         uint128[] calldata amountsPerSecond,
         int128 initialAmount,
         IDripsHub.PermitArgs calldata permitArgs
-    ) external returns (address) {
-        accountCounter++;
+    )
+        external
+        returns (address)
+    {
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
@@ -76,7 +77,7 @@ contract Workstreams {
             address(0),
             anchor,
             orgAddress,
-            accountCounter,
+            0,
             formatedReceivers,
             initialAmount,
             permitArgs
@@ -85,6 +86,28 @@ contract Workstreams {
         return workstreamId;
     }
 
+    function createERC20Workstream(
+        address orgAddress,
+        string calldata anchor,
+        address[] calldata workstreamMembers,
+        uint128[] calldata amountsPerSecond,
+        int128 initialAmount
+    ) external returns (address) {
+        IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
+            workstreamMembers,
+            amountsPerSecond
+        );
+        address workstreamId = fundWorkstreamERC20(
+            address(0),
+            anchor,
+            orgAddress,
+            0,
+            formatedReceivers,
+            initialAmount
+        );
+        workstreamIdToOrgAddress[workstreamId] = orgAddress;
+        return workstreamId;
+    }
     /// @notice Stores the workstream information using the SSTORE2 method. Read more information in:
     /// https://github.com/0xsequence/sstore2/ . We use the solmate implementation.
     /// @param anchor The project_id and commit hash where the workstream proposal
@@ -184,7 +207,6 @@ contract Workstreams {
         } else {
             _internalFundDai(
                 workstreamId,
-                account,
                 amount,
                 newReceivers,
                 permitArgs
@@ -202,11 +224,46 @@ contract Workstreams {
             );
     }
 
+    function fundWorkstreamERC20(
+        address workstreamId,
+        string memory anchor,
+        address org,
+        uint256 account,
+        IDripsHub.DripsReceiver[] memory newReceivers,
+        int128 amount
+    ) public returns (address) {
+        if (workstreamId == address(0)) {
+            IDripsHub.DripsReceiver[] memory oldReceivers;
+            daiDripsHub.setDrips(
+                account,
+                0,
+                0,
+                oldReceivers,
+                amount,
+                newReceivers
+            );
+        } else {
+            _internalFundERC20(
+                workstreamId,
+                amount,
+                newReceivers
+            );
+        }
+        return
+            storeWorkstream(
+                anchor,
+                1,
+                org,
+                account,
+                uint64(block.timestamp),
+                amount,
+                newReceivers
+            );
+    }
     /// @notice Internal function that is used to break up fundWorkstreamDai and bypass the 'stack too deep' error.
     /// For the parameters read the fundWorkstreamDai function.
     function _internalFundDai(
         address workstreamId,
-        uint256 account,
         int128 amount,
         IDripsHub.DripsReceiver[] memory newReceivers,
         IDripsHub.PermitArgs calldata permitArgs
@@ -215,6 +272,7 @@ contract Workstreams {
         uint64 lastTimestamp;
         uint128 balance;
         address org;
+        uint256 account;
         (
             ,
             ,
@@ -224,6 +282,7 @@ contract Workstreams {
             balance,
             oldReceivers
         ) = loadWorkstream(workstreamId);
+        account++;
         daiDripsHub.setDripsAndPermit(
             account,
             lastTimestamp,
@@ -235,6 +294,35 @@ contract Workstreams {
         );
     }
 
+    function _internalFundERC20(
+        address workstreamId,
+        int128 amount,
+        IDripsHub.DripsReceiver[] memory newReceivers
+    ) internal {
+        IDripsHub.DripsReceiver[] memory oldReceivers;
+        uint64 lastTimestamp;
+        uint128 balance;
+        address org;
+        uint256 account;
+        (
+            ,
+            ,
+            org,
+            account,
+            lastTimestamp,
+            balance,
+            oldReceivers
+        ) = loadWorkstream(workstreamId);
+        account++;
+        daiDripsHub.setDrips(
+            account,
+            lastTimestamp,
+            balance,
+            oldReceivers,
+            amount,
+            newReceivers
+        );
+    }
     /// @notice Internal function that constructs the receivers struct from two arrays of receivers and
     /// amounts-per-second.
     /// @param receiversAddresses An ordered array of addresses.
