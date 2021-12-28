@@ -9,16 +9,15 @@ import {Workstreams} from "../../Workstreams.sol";
 import {IDripsHub} from "../../IDAIDripsHub.sol";
 
 contract User is DSTestPlus {
-
     // mapping(string => Workstreams) workstreams;
     // constructor(){}
-
     // function addWorkstreams(string memory key, Workstreams workstream) public {
     //     workstreams[key] = workstream;
     // }
-    // function createWorkstream(string calldata key, string calldata workstreamType, address orgAddress, string calldata projectId,
-    //                  string calldata anchor, address[] calldata members, uint128[] calldata amountsPerSecond, int128 amount,
-    //                 IDripsHub.PermitArgs calldata permitArgs)
+    // function createWorkstream(string calldata key, string calldata workstreamType,
+    //                             address orgAddress, string calldata projectId,
+    //                  string calldata anchor, address[] calldata members, uint128[] calldata amountsPerSecond,
+    //                 int128 amount, IDripsHub.PermitArgs calldata permitArgs)
     //     public
     // {
     //     if(keccak256(abi.encodePacked(workstreamType)) == "dai"){
@@ -26,7 +25,5 @@ contract User is DSTestPlus {
     //     }
     // }
 }
-contract WorkStreamTest is DSTestPlus, ERC20DripsHubTest {
 
-
-}
+contract WorkStreamTest is DSTestPlus, ERC20DripsHubTest {}

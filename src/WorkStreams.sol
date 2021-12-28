@@ -43,6 +43,7 @@ contract Workstreams {
     constructor(address dripsHubAddress) {
         daiDripsHub = IDripsHub(dripsHubAddress);
     }
+
     /// @notice Create a new workstream with a DAI drip.
     /// @param orgAddress The address which is the owner of the workstream.
     /// @param anchor The project_id and commit hash where the workstream proposal
@@ -51,8 +52,8 @@ contract Workstreams {
     /// @param workstreamMembers The initial members of the workstreams. Addresses should be ordered.
     /// @param amountsPerSecond The amount per second that each address should receive from the workstream.
     /// @param initialAmount The initial amount that the workstream creator funds the workstream with.
-    /// @param permitArgs EIP712-compatible arguments struct which permits and moves funds from the workstream creator to the
-    /// workstream drip.
+    /// @param permitArgs EIP712-compatible arguments struct which permits and moves funds from the workstream creator
+    /// to the workstream drip.
     /// @return The workstreamId, used to retrieve information later and update the workstream.
     function createDaiWorkstream(
         address orgAddress,
@@ -63,7 +64,10 @@ contract Workstreams {
         IDripsHub.PermitArgs calldata permitArgs
     ) external returns (address) {
         accountCounter++;
-        IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(workstreamMembers, amountsPerSecond);
+        IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
+            workstreamMembers,
+            amountsPerSecond
+        );
         address workstreamId = fundWorkstreamDai(
             address(0),
             anchor,
@@ -83,12 +87,12 @@ contract Workstreams {
     /// got accepted by the Org for a particular RFP.
     /// @param workstreamType The type of Workstream. One of: 0: DAI, 1: ERC20, 2: ETH
     /// @param org The org to which the workstream belongs to.
-    /// @param account The account of the drip. Every address can have different drips, one per account. Read more about accounts in:
-    /// https://github.com/radicle-dev/radicle-drips-hub/blob/master/src/DripsHub.sol
+    /// @param account The account of the drip. Every address can have different drips, one per account.
+    /// Read more about accounts in: https://github.com/radicle-dev/radicle-drips-hub/blob/master/src/DripsHub.sol
     /// @param lastTimestamp The last block.timestamp at which the drip got updated.
     /// @param newBalance The new balance of the drip that will be "dripped" to the drip receivers.
-    /// @param newReceivers The new receivers of the drip. It's a struct that encapsulates both the address of the receivers
-    /// and the amount per second that they receive.
+    /// @param newReceivers The new receivers of the drip. It's a struct that encapsulates both the address
+    /// of the receivers and the amount per second that they receive.
     /// @return workstreamId The unique identification of this workstream, required to retrieve and update it.
     function storeWorkstream(
         string memory anchor,
@@ -112,6 +116,7 @@ contract Workstreams {
                 )
             );
     }
+
     /// @notice Load the workstream from the SSTORE2 storage. Read more about this in storeWorkstream.
     /// @param key The address that is used as a key to load the data from storage. It returns the data passed with
     /// storeWorkstream.
@@ -142,6 +147,7 @@ contract Workstreams {
                 )
             );
     }
+
     /// @notice Fund a workstream. If it's the first time, it also serves as initialization of the workstream object.
     /// @param workstreamId The workstream Id is required to retrieve information about the workstream.
     /// @param anchor The projectId and commit hash of the proposal to the project's canonical repository.
@@ -191,8 +197,9 @@ contract Workstreams {
                 newReceivers
             );
     }
-    /// @notice Internal function that is used to break up fundWorkstreamDai and bypass the 'stack too deep' error. For the parameters
-    /// read the fundWorkstreamDai function.
+
+    /// @notice Internal function that is used to break up fundWorkstreamDai and bypass the 'stack too deep' error.
+    /// For the parameters read the fundWorkstreamDai function.
     function _internalFundDai(
         address workstreamId,
         uint256 account,
@@ -223,18 +230,27 @@ contract Workstreams {
             permitArgs
         );
     }
-    /// @notice Internal function that constructs the receivers struct from two arrays of receivers and amounts-per-second.
+
+    /// @notice Internal function that constructs the receivers struct from two arrays of receivers and
+    /// amounts-per-second.
     /// @param receiversAddresses An ordered array of addresses.
-    /// @param amountsPerSecond Amount of funds that should be driped to the corresponding address defined in the receversAddresses parameter.
-    /// @return formatedReceivers The final struct that is cominbes the params and is required by the DripsHub smart contract.
-    function _receivers(address[] calldata receiversAddresses, uint128[] memory amountsPerSecond)
-        internal
-        view
-        returns (IDripsHub.DripsReceiver[] memory)
-    {
-        IDripsHub.DripsReceiver[] memory formatedReceivers = new IDripsHub.DripsReceiver[](receiversAddresses.length);
-        for(uint i;i<receiversAddresses.length;i++){
-            formatedReceivers[i] = IDripsHub.DripsReceiver(receiversAddresses[i], amountsPerSecond[i]);
+    /// @param amountsPerSecond Amount of funds that should be driped to the corresponding address
+    /// defined in the receversAddresses parameter.
+    /// @return formatedReceivers The final struct that is cominbes the params and
+    /// is required by the DripsHub smart contract.
+    function _receivers(
+        address[] calldata receiversAddresses,
+        uint128[] memory amountsPerSecond
+    ) internal view returns (IDripsHub.DripsReceiver[] memory) {
+        IDripsHub.DripsReceiver[]
+            memory formatedReceivers = new IDripsHub.DripsReceiver[](
+                receiversAddresses.length
+            );
+        for (uint256 i; i < receiversAddresses.length; i++) {
+            formatedReceivers[i] = IDripsHub.DripsReceiver(
+                receiversAddresses[i],
+                amountsPerSecond[i]
+            );
         }
         return formatedReceivers;
     }
