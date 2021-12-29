@@ -6,8 +6,9 @@ import {SSTORE2} from "solmate/utils/SSTORE2.sol";
 import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
 import {SafeCastLib} from "solmate/utils/SafeCastLib.sol";
 import {IDripsHub} from "./IDripsHub.sol";
+// import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
 
-/*///////////////////////////////////////////////////////////////
+    /*///////////////////////////////////////////////////////////////
                                ERRORS
     //////////////////////////////////////////////////////////////*/
 error NoAuthorisation(
@@ -63,7 +64,7 @@ contract Workstreams {
         string calldata anchor,
         address[] calldata workstreamMembers,
         uint128[] calldata amountsPerSecond,
-        int128 initialAmount,
+        uint128 initialAmount,
         IDripsHub.PermitArgs calldata permitArgs
     )
         external
@@ -79,7 +80,7 @@ contract Workstreams {
             orgAddress,
             0,
             formatedReceivers,
-            initialAmount,
+            int128(initialAmount),
             permitArgs
         );
         workstreamIdToOrgAddress[workstreamId] = orgAddress;
@@ -91,7 +92,7 @@ contract Workstreams {
         string calldata anchor,
         address[] calldata workstreamMembers,
         uint128[] calldata amountsPerSecond,
-        int128 initialAmount
+        uint128 initialAmount
     ) external returns (address) {
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
@@ -103,7 +104,7 @@ contract Workstreams {
             orgAddress,
             0,
             formatedReceivers,
-            initialAmount
+            int128(initialAmount)
         );
         workstreamIdToOrgAddress[workstreamId] = orgAddress;
         return workstreamId;
@@ -148,7 +149,7 @@ contract Workstreams {
     /// @param key The address that is used as a key to load the data from storage. It returns the data passed with
     /// storeWorkstream.
     function loadWorkstream(address key)
-        internal
+        public
         view
         returns (
             string memory,
