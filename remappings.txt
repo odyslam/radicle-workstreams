@@ -1,4 +1,4 @@
 openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
 ds-test/=lib/ds-test/src/
 solmate/=lib/solmate/src/
-drips-hub/=lib/radicle-drips-hub/src/
+radicle-drips-hub/=lib/radicle-drips-hub/src/
