@@ -11,18 +11,8 @@ import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
-import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
 
-    /*///////////////////////////////////////////////////////////////
-                               ERRORS
-    //////////////////////////////////////////////////////////////*/
-error NoAuthorisation(
-    string functionality,
-    string allowed,
-    uint8 workStreamType
-);
-
-contract Workstreams is DSTestPlus{
+contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                              LIBRARIES
     //////////////////////////////////////////////////////////////*/
@@ -264,6 +254,8 @@ contract Workstreams is DSTestPlus{
         );
     }
 
+    /// @notice Create a new dripsHub for an arbitrary ERC20 token.
+    /// @param erc20Token The address of the erc20Token
     function addERC20Token(address erc20Token)
         external
     {
