@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.10;
+import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 
 interface IDripsHub {
     struct PermitArgs {
@@ -33,4 +34,6 @@ interface IDripsHub {
         int128 balanceDelta,
         DripsReceiver[] memory newReceivers
     ) external returns (uint128 newBalance, int128 realBalanceDelta);
+
+    function erc20() external returns(IERC20);
 }
