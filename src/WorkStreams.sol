@@ -10,8 +10,10 @@ import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
 
-contract Workstreams {
 
+/// @notice Workstreams contract. Enables organizations and individuals to compensate contributors.
+/// @author Odysseas Lamtzidis (odyslam.eth)
+contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                               EVENTS
     //////////////////////////////////////////////////////////////*/
@@ -34,10 +36,6 @@ contract Workstreams {
     uint256 public constant BASE_UNIT = 10e18;
 
     mapping(address => address) public workstreamIdToOrgAddress;
-
-
-
-    IDripsHub daiDripsHub;
 
     /*///////////////////////////////////////////////////////////////
                             CONSTRUCTOR
@@ -159,11 +157,12 @@ contract Workstreams {
             address(erc20Hub) != address(0),
             "Workstreams::createERC20Workstream::no_hub_with_erc20"
         );
+        IERC20(erc20).transferFrom(msg.sender, address(this), uint256(initialAmount));
+        IERC20(erc20).approve(address(erc20Hub), uint256(initialAmount));
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
         );
-        IERC20(erc20).approve(address(erc20Hub), uint256(initialAmount));
         address workstreamId = fundWorkstreamERC20(
             address(0),
             anchor,
@@ -235,7 +234,9 @@ contract Workstreams {
             erc20Hub
         ) = loadWorkstream(workstreamId);
         account++;
-        IERC20(erc20Hub.erc20()).approve(address(erc20Hub), uint256(balance));
+        IERC20 erc20 = erc20Hub.erc20();
+        erc20.transferFrom(msg.sender, address(this), uint256(balance));
+        erc20.approve(address(erc20Hub), uint256(balance));
         erc20Hub.setDrips(
             account,
             lastTimestamp,
@@ -269,6 +270,8 @@ contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                             DAI WORKSTREAMS
     //////////////////////////////////////////////////////////////*/
+
+    IDripsHub daiDripsHub;
 
     /// @notice Create a new workstream with a DAI drip.
     /// @param orgAddress The address which is the owner of the workstream.

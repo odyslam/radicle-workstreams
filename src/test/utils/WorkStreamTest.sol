@@ -39,6 +39,9 @@ contract User is DSTestPlus {
                 permitArgs
             );
     }
+    function approveERC20Workstream(address workstream, address erc20) public{
+        IERC20(erc20).approve(workstream, type(uint256).max);
+    }
 
     function createERC20Workstream(
         string calldata key,
@@ -49,7 +52,6 @@ contract User is DSTestPlus {
         uint128 amount,
         address erc20
     ) public returns (address) {
-        IERC20(erc20).transfer(address(workstreams[key]), uint256(amount));
         return
             workstreams[key].createERC20Workstream(
                 orgAddress,
@@ -92,6 +94,7 @@ contract WorkStreamTest is DSTestPlus {
         ampts[0] = 1 * 10e17;
         uint128 initialAmount = 10 * 10e18;
         testWorkstream = new Workstreams();
+        user.approveERC20Workstream(address(testWorkstream), usdcAddress);
         testWorkstream.addERC20Token(usdcAddress);
         user.addWorkstreams("test1", testWorkstream);
         string
