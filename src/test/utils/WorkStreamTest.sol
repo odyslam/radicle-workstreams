@@ -80,6 +80,7 @@ contract WorkStreamTest is DSTestPlus {
     IDripsHub iDripsHub;
 
     function setUp() public {
+        // create a mock erc20 token
         usdc = new MockERC20("USDC", "USDC", 18);
         user = new User();
         usdc.mint(address(user), 100 * 10e18);
@@ -93,12 +94,17 @@ contract WorkStreamTest is DSTestPlus {
         uint128[] memory ampts = new uint128[](1);
         ampts[0] = 1 * 10e17;
         uint128 initialAmount = 10 * 10e18;
+        // initialise the workstreams contract
         testWorkstream = new Workstreams();
+        // approve the contract to transfer erc20 funds, much like you do in AMMs like Uniswap
         user.approveERC20Workstream(address(testWorkstream), usdcAddress);
+        // since there is no dripshub for that erc20, create a new hub to use in workstreams
         testWorkstream.addERC20Token(usdcAddress);
+        // register the workstream in the user test contract. Only for testing.
         user.addWorkstreams("test1", testWorkstream);
         string
             memory anchor = "rad:git:hnrkk1mdmp7rgrhmb786ci5fn445q4rmkfwyy@e4c81ded3a20327af695968c2fb393541609facb";
+        // create a new workstream
         address workstreamId = user.createERC20Workstream(
             "test1",
             address(user),
