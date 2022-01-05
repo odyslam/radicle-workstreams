@@ -3,8 +3,6 @@ pragma solidity ^0.8.10;
 
 import {RolesAuthority} from "solmate/auth/authorities/RolesAuthority.sol";
 import {SSTORE2} from "solmate/utils/SSTORE2.sol";
-import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
-import {SafeCastLib} from "solmate/utils/SafeCastLib.sol";
 import {IDripsHub} from "./IDripsHub.sol";
 import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 // Radicle DripsHub imports
@@ -13,12 +11,6 @@ import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
 
 contract Workstreams {
-    /*///////////////////////////////////////////////////////////////
-                             LIBRARIES
-    //////////////////////////////////////////////////////////////*/
-
-    using FixedPointMathLib for uint256;
-    using SafeCastLib for uint256;
 
     /*///////////////////////////////////////////////////////////////
                               EVENTS
@@ -43,7 +35,7 @@ contract Workstreams {
 
     mapping(address => address) public workstreamIdToOrgAddress;
 
-    mapping(address => IDripsHub) public erc20TokensLibrary;
+
 
     IDripsHub daiDripsHub;
 
@@ -54,14 +46,18 @@ contract Workstreams {
     constructor() {
         admin = msg.sender;
     }
-    function initCommonDripsHubs(IDripsHub daiHub,
-                                 IDripsHub usdtHub,
-                                 IDripsHub usdcHub,
-                                 IDripsHub wethHub)
-        external
-    {
-        require(address(daiDripsHub) == address(0), "Workstreams::initCommonDripsHubs::already_initialized");
-        erc20TokensLibrary[address(daiHub.erc20())]  = daiHub;
+
+    function initCommonDripsHubs(
+        IDripsHub daiHub,
+        IDripsHub usdtHub,
+        IDripsHub usdcHub,
+        IDripsHub wethHub
+    ) external {
+        require(
+            address(daiDripsHub) == address(0),
+            "Workstreams::initCommonDripsHubs::already_initialized"
+        );
+        erc20TokensLibrary[address(daiHub.erc20())] = daiHub;
         daiDripsHub = daiHub;
         erc20TokensLibrary[address(usdtHub.erc20())] = usdtHub;
         erc20TokensLibrary[address(usdcHub.erc20())] = usdcHub;
@@ -146,6 +142,8 @@ contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                             ERC20 WORKSTREAMS
     //////////////////////////////////////////////////////////////*/
+    /// @notice stores the dripshub for each erc20 token that has been registered to workstreams.
+    mapping(address => IDripsHub) public erc20TokensLibrary;
 
     /// @notice Createa a new workstream with an ERC20 drip. Read more about this on crateDaiWorkstream().
     function createERC20Workstream(
@@ -154,10 +152,13 @@ contract Workstreams {
         address[] calldata workstreamMembers,
         uint128[] calldata amountsPerSecond,
         uint128 initialAmount,
-        address erc20)
-    external returns (address) {
+        address erc20
+    ) external returns (address) {
         IDripsHub erc20Hub = erc20TokensLibrary[erc20];
-        require(address(erc20Hub) != address(0), "Workstreams::createERC20Workstream::no_hub_with_erc20");
+        require(
+            address(erc20Hub) != address(0),
+            "Workstreams::createERC20Workstream::no_hub_with_erc20"
+        );
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
@@ -176,7 +177,6 @@ contract Workstreams {
         return workstreamId;
     }
 
-
     function fundWorkstreamERC20(
         address workstreamId,
         string memory anchor,
@@ -185,10 +185,7 @@ contract Workstreams {
         IDripsHub.DripsReceiver[] memory newReceivers,
         int128 amount,
         IDripsHub erc20Hub
-        )
-        public
-        returns (address)
-    {
+    ) public returns (address) {
         if (workstreamId == address(0)) {
             IDripsHub.DripsReceiver[] memory oldReceivers;
             // Currently, the workstream contract is the single user that owns all drips
@@ -201,11 +198,7 @@ contract Workstreams {
                 newReceivers
             );
         } else {
-            _internalFundERC20(
-                workstreamId,
-                amount,
-                newReceivers
-            );
+            _internalFundERC20(workstreamId, amount, newReceivers);
         }
         return
             storeWorkstream(
@@ -219,7 +212,6 @@ contract Workstreams {
                 erc20Hub
             );
     }
-
 
     function _internalFundERC20(
         address workstreamId,
@@ -256,14 +248,17 @@ contract Workstreams {
 
     /// @notice Create a new dripsHub for an arbitrary ERC20 token.
     /// @param erc20Token The address of the erc20Token
-    function addERC20Token(address erc20Token)
-        external
-    {
-        require(address(erc20TokensLibrary[erc20Token]) == address(0),
-                "Workstreams::addERC20Token::erc20_token_already_added");
+    function addERC20Token(address erc20Token) external {
+        require(
+            address(erc20TokensLibrary[erc20Token]) == address(0),
+            "Workstreams::addERC20Token::erc20_token_already_added"
+        );
         IERC20 erc20 = IERC20(erc20Token);
         ERC20DripsHub hubLogic = new ERC20DripsHub(CYCLE_SECS, erc20);
-        ManagedDripsHubProxy proxy = new ManagedDripsHubProxy(hubLogic, address(this));
+        ManagedDripsHubProxy proxy = new ManagedDripsHubProxy(
+            hubLogic,
+            address(this)
+        );
         ERC20DripsHub hub = ERC20DripsHub(address(proxy));
         erc20TokensLibrary[erc20Token] = IDripsHub(address(hub));
         ERC20Reserve reserve = new ERC20Reserve(erc20, admin, address(hub));
@@ -293,10 +288,7 @@ contract Workstreams {
         uint128[] calldata amountsPerSecond,
         uint128 initialAmount,
         IDripsHub.PermitArgs calldata permitArgs
-    )
-        external
-        returns (address)
-    {
+    ) external returns (address) {
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
@@ -313,6 +305,7 @@ contract Workstreams {
         workstreamIdToOrgAddress[workstreamId] = orgAddress;
         return workstreamId;
     }
+
     /// @notice Fund a workstream. If it's the first time, it also serves as initialization of the workstream object.
     /// @param workstreamId The workstream Id is required to retrieve information about the workstream.
     /// @param anchor The projectId and commit hash of the proposal to the project's canonical repository.
@@ -343,12 +336,7 @@ contract Workstreams {
                 permitArgs
             );
         } else {
-            _internalFundDai(
-                workstreamId,
-                amount,
-                newReceivers,
-                permitArgs
-            );
+            _internalFundDai(workstreamId, amount, newReceivers, permitArgs);
         }
         return
             storeWorkstream(
@@ -397,7 +385,6 @@ contract Workstreams {
             permitArgs
         );
     }
-
 
     /// @notice Internal function that constructs the receivers struct from two arrays of receivers and
     /// amounts-per-second.
