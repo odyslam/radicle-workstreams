@@ -35,5 +35,5 @@ interface IDripsHub {
         DripsReceiver[] memory newReceivers
     ) external returns (uint128 newBalance, int128 realBalanceDelta);
 
-    function erc20() external returns(IERC20);
+    function erc20() external returns (IERC20);
 }

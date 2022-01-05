@@ -11,32 +11,54 @@ import {DaiDripsHub, DripsReceiver, IDai, SplitsReceiver} from "radicle-drips-hu
 import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 
-
 contract User is DSTestPlus {
-     mapping(string => Workstreams) workstreams;
-     constructor(){}
-     function addWorkstreams(string memory key, Workstreams workstream) public {
-         workstreams[key] = workstream;
-     }
-     function createDaiWorkstream(string calldata key,
-                                address orgAddress, string calldata anchor,
-                                address[] calldata members, uint128[] calldata amountsPerSecond, uint128 amount,
-                                IDripsHub.PermitArgs calldata permitArgs
-                              )
-         public
-         returns(address)
-     {
-         return workstreams[key].createDaiWorkstream(orgAddress, anchor, members, amountsPerSecond, amount, permitArgs);
-     }
-     function createERC20Workstream(string calldata key,
-                                address orgAddress, string calldata anchor,
-                                address[] calldata members, uint128[] calldata amountsPerSecond, uint128 amount,
-                                address erc20)
-        public
-        returns(address)
-    {
+    mapping(string => Workstreams) workstreams;
+
+    constructor() {}
+
+    function addWorkstreams(string memory key, Workstreams workstream) public {
+        workstreams[key] = workstream;
+    }
+
+    function createDaiWorkstream(
+        string calldata key,
+        address orgAddress,
+        string calldata anchor,
+        address[] calldata members,
+        uint128[] calldata amountsPerSecond,
+        uint128 amount,
+        IDripsHub.PermitArgs calldata permitArgs
+    ) public returns (address) {
+        return
+            workstreams[key].createDaiWorkstream(
+                orgAddress,
+                anchor,
+                members,
+                amountsPerSecond,
+                amount,
+                permitArgs
+            );
+    }
+
+    function createERC20Workstream(
+        string calldata key,
+        address orgAddress,
+        string calldata anchor,
+        address[] calldata members,
+        uint128[] calldata amountsPerSecond,
+        uint128 amount,
+        address erc20
+    ) public returns (address) {
         IERC20(erc20).transfer(address(workstreams[key]), uint256(amount));
-        return workstreams[key].createERC20Workstream(orgAddress, anchor, members, amountsPerSecond, amount, erc20);
+        return
+            workstreams[key].createERC20Workstream(
+                orgAddress,
+                anchor,
+                members,
+                amountsPerSecond,
+                amount,
+                erc20
+            );
     }
 }
 
@@ -58,39 +80,51 @@ contract WorkStreamTest is DSTestPlus {
     function setUp() public {
         usdc = new MockERC20("USDC", "USDC", 18);
         user = new User();
-        usdc.mint(address(user), 100*10e18);
-        assertEq(100*10e18, usdc.balanceOf(address(user)));
+        usdc.mint(address(user), 100 * 10e18);
+        assertEq(100 * 10e18, usdc.balanceOf(address(user)));
         users = new address[](1);
-
     }
+
     function testCreateErc20Workstream() public {
         address usdcAddress = address(usdc);
         users[0] = address(new User());
         uint128[] memory ampts = new uint128[](1);
-        ampts[0] = 1*10e17;
-        uint128 initialAmount = 10*10e18;
-        testWorkstream= new Workstreams();
+        ampts[0] = 1 * 10e17;
+        uint128 initialAmount = 10 * 10e18;
+        testWorkstream = new Workstreams();
         testWorkstream.addERC20Token(usdcAddress);
         user.addWorkstreams("test1", testWorkstream);
-        string memory anchor = "rad:git:hnrkk1mdmp7rgrhmb786ci5fn445q4rmkfwyy@e4c81ded3a20327af695968c2fb393541609facb";
-        address workstreamId = user.createERC20Workstream("test1", address(user), anchor, users, ampts, initialAmount,
-                                                          usdcAddress);
+        string
+            memory anchor = "rad:git:hnrkk1mdmp7rgrhmb786ci5fn445q4rmkfwyy@e4c81ded3a20327af695968c2fb393541609facb";
+        address workstreamId = user.createERC20Workstream(
+            "test1",
+            address(user),
+            anchor,
+            users,
+            ampts,
+            initialAmount,
+            usdcAddress
+        );
         emit log_named_address("WorkstreamId: ", workstreamId);
-        (string memory workstreamAnchor,
-        uint8 workstreamType,
-        address org,
-        uint256 account,
-        uint64 lastTimestamp,
-        uint128 newBalance,
-        IDripsHub.DripsReceiver[] memory newReceivers,
-        IDripsHub erc20Hub) = testWorkstream.loadWorkstream(workstreamId);
+        (
+            string memory workstreamAnchor,
+            uint8 workstreamType,
+            address org,
+            uint256 account,
+            uint64 lastTimestamp,
+            uint128 newBalance,
+            IDripsHub.DripsReceiver[] memory newReceivers,
+            IDripsHub erc20Hub
+        ) = testWorkstream.loadWorkstream(workstreamId);
         assertEq(address(user), org);
         assertEq(1, workstreamType);
         assertEq(0, lastTimestamp);
         assertEq(initialAmount, newBalance);
         assertEq(anchor, workstreamAnchor);
         assertEq(0, account);
-        assertEq(address(testWorkstream.erc20TokensLibrary(usdcAddress)), address(erc20Hub));
+        assertEq(
+            address(testWorkstream.erc20TokensLibrary(usdcAddress)),
+            address(erc20Hub)
+        );
     }
-
 }
