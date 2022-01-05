@@ -39,7 +39,8 @@ contract User is DSTestPlus {
                 permitArgs
             );
     }
-    function approveERC20Workstream(address workstream, address erc20) public{
+
+    function approveERC20Workstream(address workstream, address erc20) public {
         IERC20(erc20).approve(workstream, type(uint256).max);
     }
 

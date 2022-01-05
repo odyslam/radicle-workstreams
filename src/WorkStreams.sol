@@ -10,7 +10,6 @@ import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
 
-
 /// @notice Workstreams contract. Enables organizations and individuals to compensate contributors.
 /// @author Odysseas Lamtzidis (odyslam.eth)
 contract Workstreams {
@@ -157,7 +156,11 @@ contract Workstreams {
             address(erc20Hub) != address(0),
             "Workstreams::createERC20Workstream::no_hub_with_erc20"
         );
-        IERC20(erc20).transferFrom(msg.sender, address(this), uint256(initialAmount));
+        IERC20(erc20).transferFrom(
+            msg.sender,
+            address(this),
+            uint256(initialAmount)
+        );
         IERC20(erc20).approve(address(erc20Hub), uint256(initialAmount));
         IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
             workstreamMembers,
