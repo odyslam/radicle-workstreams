@@ -77,6 +77,7 @@ contract Workstreams {
     /// @param newBalance The new balance of the drip that will be "dripped" to the drip receivers.
     /// @param newReceivers The new receivers of the drip. It's a struct that encapsulates both the address
     /// of the receivers and the amount per second that they receive.
+    /// @param hub The drips hub contract instance.
     /// @return workstreamId The unique identification of this workstream, required to retrieve and update it.
     function _storeWorkstream(
         string memory anchor,
