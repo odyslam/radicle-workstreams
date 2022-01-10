@@ -30,7 +30,7 @@ contract Workstreams {
 
     uint64 public constant CYCLE_SECS = 7 days;
 
-    address admin;
+    address public admin;
 
     uint256 public constant BASE_UNIT = 10e18;
 
