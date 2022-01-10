@@ -3,12 +3,12 @@ pragma solidity ^0.8.10;
 
 import {RolesAuthority} from "solmate/auth/authorities/RolesAuthority.sol";
 import {SSTORE2} from "solmate/utils/SSTORE2.sol";
-import {IDripsHub} from "./IDripsHub.sol";
-import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 // Radicle DripsHub imports
 import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
+import {IDripsHub} from "./IDripsHub.sol";
+import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 
 /// @notice Workstreams contract. Enables organizations and individuals to compensate contributors.
 /// @author Odysseas Lamtzidis (odyslam.eth)
