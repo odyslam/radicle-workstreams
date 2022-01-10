@@ -78,7 +78,7 @@ contract Workstreams {
     /// @param newReceivers The new receivers of the drip. It's a struct that encapsulates both the address
     /// of the receivers and the amount per second that they receive.
     /// @return workstreamId The unique identification of this workstream, required to retrieve and update it.
-    function storeWorkstream(
+    function _storeWorkstream(
         string memory anchor,
         uint8 workstreamType,
         address org,
@@ -103,9 +103,9 @@ contract Workstreams {
             );
     }
 
-    /// @notice Load the workstream from the SSTORE2 storage. Read more about this in storeWorkstream.
+    /// @notice Load the workstream from the SSTORE2 storage. Read more about this in _storeWorkstream.
     /// @param key The address that is used as a key to load the data from storage. It returns the data passed with
-    /// storeWorkstream.
+    /// _storeWorkstream.
     function loadWorkstream(address key)
         public
         view
@@ -203,7 +203,7 @@ contract Workstreams {
             _internalFundERC20(workstreamId, amount, newReceivers);
         }
         return
-            storeWorkstream(
+            _storeWorkstream(
                 anchor,
                 1,
                 org,
@@ -345,7 +345,7 @@ contract Workstreams {
             _internalFundDai(workstreamId, amount, newReceivers, permitArgs);
         }
         return
-            storeWorkstream(
+            _storeWorkstream(
                 anchor,
                 1,
                 org,
