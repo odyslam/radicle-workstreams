@@ -11,3 +11,6 @@
 [submodule "lib/radicle-drips-hub"]
 	path = lib/radicle-drips-hub
 	url = https://github.com/radicle-dev/radicle-drips-hub
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/brockelmore/forge-std
