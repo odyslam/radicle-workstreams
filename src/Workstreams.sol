@@ -3,12 +3,12 @@ pragma solidity ^0.8.10;
 
 import {RolesAuthority} from "solmate/auth/authorities/RolesAuthority.sol";
 import {SSTORE2} from "solmate/utils/SSTORE2.sol";
-import {IDripsHub} from "./IDripsHub.sol";
-import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 // Radicle DripsHub imports
 import {ERC20Reserve} from "radicle-drips-hub/ERC20Reserve.sol";
 import {ERC20DripsHub} from "radicle-drips-hub/ERC20DripsHub.sol";
 import {ManagedDripsHubProxy} from "radicle-drips-hub/ManagedDripsHub.sol";
+import {IDripsHub} from "./IDripsHub.sol";
+import {IERC20} from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 
 /// @notice Workstreams contract. Enables organizations and individuals to compensate contributors.
 /// @author Odysseas Lamtzidis (odyslam.eth)
@@ -30,7 +30,7 @@ contract Workstreams {
 
     uint64 public constant CYCLE_SECS = 7 days;
 
-    address admin;
+    address public admin;
 
     uint256 public constant BASE_UNIT = 10e18;
 
@@ -77,8 +77,9 @@ contract Workstreams {
     /// @param newBalance The new balance of the drip that will be "dripped" to the drip receivers.
     /// @param newReceivers The new receivers of the drip. It's a struct that encapsulates both the address
     /// of the receivers and the amount per second that they receive.
+    /// @param hub The drips hub contract instance.
     /// @return workstreamId The unique identification of this workstream, required to retrieve and update it.
-    function storeWorkstream(
+    function _storeWorkstream(
         string memory anchor,
         uint8 workstreamType,
         address org,
@@ -103,9 +104,9 @@ contract Workstreams {
             );
     }
 
-    /// @notice Load the workstream from the SSTORE2 storage. Read more about this in storeWorkstream.
+    /// @notice Load the workstream from the SSTORE2 storage. Read more about this in _storeWorkstream.
     /// @param key The address that is used as a key to load the data from storage. It returns the data passed with
-    /// storeWorkstream.
+    /// _storeWorkstream.
     function loadWorkstream(address key)
         public
         view
@@ -139,10 +140,10 @@ contract Workstreams {
     /*///////////////////////////////////////////////////////////////
                             ERC20 WORKSTREAMS
     //////////////////////////////////////////////////////////////*/
-    /// @notice stores the dripshub for each erc20 token that has been registered to workstreams.
+    /// @notice Stores the dripshub for each erc20 token that has been registered to workstreams.
     mapping(address => IDripsHub) public erc20TokensLibrary;
 
-    /// @notice Createa a new workstream with an ERC20 drip. Read more about this on crateDaiWorkstream().
+    /// @notice Create a new workstream with an ERC20 drip. Read more about this on createDaiWorkstream().
     function createERC20Workstream(
         address orgAddress,
         string calldata anchor,
@@ -162,7 +163,7 @@ contract Workstreams {
             uint256(initialAmount)
         );
         IERC20(erc20).approve(address(erc20Hub), uint256(initialAmount));
-        IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
+        IDripsHub.DripsReceiver[] memory formattedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
         );
@@ -171,7 +172,7 @@ contract Workstreams {
             anchor,
             orgAddress,
             0,
-            formatedReceivers,
+            formattedReceivers,
             int128(initialAmount),
             erc20Hub
         );
@@ -203,7 +204,7 @@ contract Workstreams {
             _internalFundERC20(workstreamId, amount, newReceivers);
         }
         return
-            storeWorkstream(
+            _storeWorkstream(
                 anchor,
                 1,
                 org,
@@ -295,7 +296,7 @@ contract Workstreams {
         uint128 initialAmount,
         IDripsHub.PermitArgs calldata permitArgs
     ) external returns (address) {
-        IDripsHub.DripsReceiver[] memory formatedReceivers = _receivers(
+        IDripsHub.DripsReceiver[] memory formattedReceivers = _receivers(
             workstreamMembers,
             amountsPerSecond
         );
@@ -304,7 +305,7 @@ contract Workstreams {
             anchor,
             orgAddress,
             0,
-            formatedReceivers,
+            formattedReceivers,
             int128(initialAmount),
             permitArgs
         );
@@ -345,7 +346,7 @@ contract Workstreams {
             _internalFundDai(workstreamId, amount, newReceivers, permitArgs);
         }
         return
-            storeWorkstream(
+            _storeWorkstream(
                 anchor,
                 1,
                 org,
@@ -395,24 +396,24 @@ contract Workstreams {
     /// @notice Internal function that constructs the receivers struct from two arrays of receivers and
     /// amounts-per-second.
     /// @param receiversAddresses An ordered array of addresses.
-    /// @param amountsPerSecond Amount of funds that should be driped to the corresponding address
-    /// defined in the receversAddresses parameter.
-    /// @return formatedReceivers The final struct that is cominbes the params and
+    /// @param amountsPerSecond Amount of funds that should be dripped to the corresponding address
+    /// defined in the receiversAddresses parameter.
+    /// @return formattedReceivers The final struct that is cominbes the params and
     /// is required by the DripsHub smart contract.
     function _receivers(
         address[] calldata receiversAddresses,
         uint128[] memory amountsPerSecond
     ) internal view returns (IDripsHub.DripsReceiver[] memory) {
         IDripsHub.DripsReceiver[]
-            memory formatedReceivers = new IDripsHub.DripsReceiver[](
+            memory formattedReceivers = new IDripsHub.DripsReceiver[](
                 receiversAddresses.length
             );
         for (uint256 i; i < receiversAddresses.length; i++) {
-            formatedReceivers[i] = IDripsHub.DripsReceiver(
+            formattedReceivers[i] = IDripsHub.DripsReceiver(
                 receiversAddresses[i],
                 amountsPerSecond[i]
             );
         }
-        return formatedReceivers;
+        return formattedReceivers;
     }
 }
