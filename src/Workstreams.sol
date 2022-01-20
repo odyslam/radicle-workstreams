@@ -251,26 +251,6 @@ contract Workstreams {
         );
     }
 
-    /// @notice Create a new dripsHub for an arbitrary ERC20 token.
-    /// @param erc20Token The address of the erc20Token
-    function addERC20Token(address erc20Token) external {
-        require(
-            address(erc20TokensLibrary[erc20Token]) == address(0),
-            "Workstreams::addERC20Token::erc20_token_already_added"
-        );
-        IERC20 erc20 = IERC20(erc20Token);
-        ERC20DripsHub hubLogic = new ERC20DripsHub(CYCLE_SECS, erc20);
-        ManagedDripsHubProxy proxy = new ManagedDripsHubProxy(
-            hubLogic,
-            address(this)
-        );
-        ERC20DripsHub hub = ERC20DripsHub(address(proxy));
-        erc20TokensLibrary[erc20Token] = IDripsHub(address(hub));
-        ERC20Reserve reserve = new ERC20Reserve(erc20, admin, address(hub));
-        hub.setReserve(reserve);
-        emit ERC20DripsHubCreated(erc20Token);
-    }
-
     /*///////////////////////////////////////////////////////////////
                             DAI WORKSTREAMS
     //////////////////////////////////////////////////////////////*/
