@@ -5,3 +5,6 @@
 - Radicle Network: `rad:git:hnrkk1mdmp7rgrhmb786ci5fn445q4rmkfwyy`
 - Working doc (notes, diagrams, etc.): https://hackmd.io/@odyslam/workstreams
 
+## Deployment
+
+The project uses Forge for deployment
